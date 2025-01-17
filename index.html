@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagem de Fundo Contínua</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 0;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+
+      body.dark {
+        background-color: #fffdfd;
+        background-image: url(./assets/bg-desktop-light.jpg);
+        color: black;
+      }
+
+      body.dark p,
+      body.dark ul li a,
+      body.dark footer,
+      body.dark footer a {
+        color: black;
+      }
+
+      body.dark #social-links ion-icon {
+        color: black;
+      }
+
+      #container {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      p {
+        margin-top: 10px;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        color: white;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.123);
+        transition: background-color 0.3s ease, border-color 0.3s ease,
+          box-shadow 0.3s ease;
+        display: block;
+        width: 100%;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-family: "Inter", sans-serif;
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        transition: all 0.5s;
+      }
+
+      ul li:hover {
+        background-color: rgba(255, 255, 255, 0.068);
+        border-color: #ff6600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      ul li a:hover {
+        color: #ff6600;
+      }
+
+      #social-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 15px;
+      }
+
+      #social-links ion-icon {
+        font-size: 30px;
+        color: white;
+        transition: transform 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+      }
+
+      #social-links ion-icon:hover {
+        color: #ff6600;
+        transform: scale(1.2);
+      }
+
+      footer {
+        color: white;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: underline;
+      }
+
+      footer a:hover {
+        color: #ff6600;
+      }
+
+      /* Estilo da lâmpada no canto */
+      #lamp-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+        cursor: pointer;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Quando o tema é escuro, muda a cor da lâmpada */
+      body.dark #lamp-icon {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img
+      src=https://scontent.fmgf7-1.fna.fbcdn.net/v/t39.30808-6/245072726_4399220126800409_3975028432793342687_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGsAgefilQf_jpJ_Luz_ODPy6VwgjmkQUjLpXCCOaRBSNuUqXSSXQl-Tb8yO9nUGUJk4Ja08fWj8zDPWbsCbnHH&_nc_ohc=mS4kFumQ2KUQ7kNvgFyk1OA&_nc_oc=Adg_Yz_oJw6q5RRi5nfGF-kKqSghZb0Dy_rZbM2A72DCLfZH5ReEhvQaz59TmF-zvuo&_nc_zt=23&_nc_ht=scontent.fmgf7-1.fna&_nc_gid=A5-aObM3hLoz-BB_Yxojgmm&oh=00_AYAruM5bhKwcJQ_faNKuFjjmc-j73KMhL05QCjC4mo3NhQ&oe=678F422D
+      alt="Imagem exemplo" />
+      <p>@mirandacom2a</p>
+      <ul>
+        <li><a href="#">Entre no meu instagram</a></li>
+        <li><a href="#">Outro link</a></li>
+        <li><a href="#">Mais um link</a></li>
+      </ul>
+    </div>
+    <div id="social-links">
+      <ion-icon name="logo-github"></ion-icon>
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-youtube"></ion-icon>
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </div>
+
+    <footer>
+      Feito com a ajuda da <a href="https://rocketseat.com.br">Rocketseat</a>
+    </footer>
+
+    <!-- Ícone da lâmpada para alternar o tema -->
+    <ion-icon id="lamp-icon" name="bulb" onclick="toggleTheme()"></ion-icon>
+
+    <script>
+      // Função para alternar o tema
+      function toggleTheme() {
+        document.body.classList.toggle("dark")
+      }
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+    <script>
+      // Função para alternar o tema
+      function toggleTheme() {
+        // Alternar a classe "dark" no corpo
+        document.body.classList.toggle("dark")
+
+        // Selecionar a imagem
+        const imgElement = document.querySelector("#container img")
+
+        // Verificar o tema atual e trocar a imagem
+        if (document.body.classList.contains("dark")) {
+          imgElement.src =
+            "https://scontent.fmgf7-1.fna.fbcdn.net/v/t1.6435-9/116742283_3159737907415310_9018605019720741128_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHfVFNCVNXekh0RIU964RLqP8-UNw3brtA_z5Q3Dduu0P-Wql-fzKBIkliKuAw9QgZEM0tCi6Df8r7xvq_cXeo5&_nc_ohc=C7E27mvMEu0Q7kNvgF1_mG6&_nc_oc=AdiTJ4Y1By5U9cM6ajSoABJgc0pTb6LMwPAFJ4ogYuNYnxVtM3y97yJdkulvZ8fWNew&_nc_zt=23&_nc_ht=scontent.fmgf7-1.fna&_nc_gid=AC55ewmwnrRC8iniLQgkQn5&oh=00_AYBFquBgI_k82NaN7TgZBdmtBGdKaNQQuRnBNBLUiqv12A&oe=67B22B1B" // Imagem para tema escuro
+        } else {
+          imgElement.src =
+            "https://scontent.fmgf7-1.fna.fbcdn.net/v/t39.30808-1/245072726_4399220126800409_3975028432793342687_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGsAgefilQf_jpJ_Luz_ODPy6VwgjmkQUjLpXCCOaRBSNuUqXSSXQl-Tb8yO9nUGUJk4Ja08fWj8zDPWbsCbnHH&_nc_ohc=mS4kFumQ2KUQ7kNvgFyk1OA&_nc_oc=Adg_Yz_oJw6q5RRi5nfGF-kKqSghZb0Dy_rZbM2A72DCLfZH5ReEhvQaz59TmF-zvuo&_nc_zt=24&_nc_ht=scontent.fmgf7-1.fna&_nc_gid=AEWmi9tiU34W3LK6KxoYH6o&oh=00_AYBzOYjexibix28QPltQ8NrhKLxHso0fozs1_DxqM3R6fQ&oe=679086EF" // Imagem para tema claro
+        }
+      }
+    </script>
+  </body>
+</html>

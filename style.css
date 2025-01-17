@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+*/
+  background: url(./assets/bg-mobile.jpg) no-repeat center center/cover;
+  height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+  display: flex; /* Centraliza o container na página */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+body* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#container {
+  width: 360px;
+  height: 712px;
+
+  display: flex; /* Flexbox para centralizar a imagem */
+  margin: auto;
+  margin-top: 56px;
+}
+
+#profile img {
+  width: 112px;
+  padding: 24px;
+  margin-top: 8px;
+}
+
+ul li {
+  border: 1px solid red;
+}
+
+/* Contêiner para os ícones sociais */
+#social-links {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  gap: 30px; /* Espaçamento entre os ícones */
+  margin-top: 40px; /* Espaço acima do grupo de ícones */
+}
+
+/* Estilos aplicados aos ícones */
+#social-links ion-icon {
+  font-size: 250px; /* Define o tamanho dos ícones */
+  color: white; /* Define a cor dos ícones */
+  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza transformações */
+}
+
+/* Efeito ao passar o mouse sobre os ícones */
+#social-links ion-icon:hover {
+  color: #ff6600; /* Muda a cor dos ícones ao passar o mouse */
+  transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+}
+
+:root {
+  --text-color: white;
+}
+
+/* Configuração do modo escuro */
+body.dark {
+  background-color: #fffdfd; /* Fundo claro */
+  background-image: url(./assets/bg-desktop-light.jpg); /* Imagem de fundo */
+  color: black; /* Texto preto */
+}
+
+/* Atualização para os links no modo escuro */
+body.dark ul li a {
+  color: black; /* Links pretos no modo escuro */
+}
+
+body.dark footer,
+body.dark footer a {
+  color: black; /* Texto e links pretos no rodapé */
+}
